@@ -1,0 +1,3 @@
+b <- c(1,2,3,4,5,6)
+> a=replicate(100,mean(sample(xlsb, 6, replace = TRUE)))
+# now a is a representative distribution of the data set C

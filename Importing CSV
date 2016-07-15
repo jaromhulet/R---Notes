@@ -1,0 +1,9 @@
+
+#code for pulling data from excel
+
+> data1 <- read.csv(file.choose(), header=TRUE)
+
+#to call columns use this format
+
+>summary(data1$column_name)
+nter file contents here

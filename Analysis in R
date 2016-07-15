@@ -1,5 +1,5 @@
-# Linear regression
-fit <- lm(data1$column1 ~ data1$column2, data=data1)
+# LINEAR REGRESSION 
+    fit <- lm(data1$column1 ~ data1$column2, data=data1)
 
-#multiple linear regression
-fit <- lm(data1$column1 ~ data1$column2 + data1$column3, data=data1)
+#MULTIPLE LINEAR REGRESSION
+    fit <- lm(data1$column1 ~ data1$column2 + data1$column3, data=data1)

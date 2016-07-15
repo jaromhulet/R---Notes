@@ -9,3 +9,6 @@
     #PLOT RESIDUALS AGAINST FITTED VALUES
         plot(resid(regression1)~fitted(regression1))
         
+    #BREUSCH-PAGAN TEST
+        bptest(regression1)
+        

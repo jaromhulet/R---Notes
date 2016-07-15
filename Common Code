@@ -1,1 +1,4 @@
 # Use "Control L" to clear out your screen
+
+# To see the first few values for a data set
+head(data1)

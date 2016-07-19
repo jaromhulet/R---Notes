@@ -6,6 +6,9 @@ rm(list = ls())
 # Get help with data sets, functions and more, put a question mark (?) in front of what you need
 ?head
 
+# show first 5 rows with all of the variables in a data set
+data[1:5, ]
+
 # To see the first few values for a data set
 head(data1)
 
@@ -21,4 +24,41 @@ boxplot(data, xlab = "x-axis", horizontal = TRUE, main = "Title") # creates a bo
 
 # look at structure of data set
 str(data)
+
+# Create a probability distribution from data
+hist(data, prob = TRUE)
+
+# create a kernel density line (basically a smoothed histogram line
+lines(density(data))
+
+# add a rug to a histogram, that is where specific data points fall in the histogram
+rug(data)
+
+# making a table with decreasing values instead of alphabetical order (default)
+sort(table, decreasing = TRUE)
+
+# Proportional table
+prob.table(data)
+
+# Proportion test => it tests whether the number of successes is statistically different from 50%, 98 is successes, 162 is trials
+prop.test(98, 162)
+prop.test(98, 162, alt = "greater", conf.level = .9) # change alternative to a one-sided greater, set confidence level from default of .95 to .9, this changes confidence interval as well
+
+
+# One sample t-test
+t.test(data) # this has 0 as the alternative hypothesis
+t.test(data, alternative = "greater", mu = 4) # this sets a one-sided test with 4 as the alternative hypothesis
+
+
+# margin of categorical table
+margin.table(data, 1) # 1 is the position of the column or row that you want the margins of
+
+# One-Chi squared test, the defualt is that all catgorical data are distributed equally
+chisq.test(data)
+chisq.test(data, p = c(.41, .32, .15, .12)) # tests whether the proportion of the data differs from the four give proportions
+
+
+ 
+
+
 

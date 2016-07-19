@@ -18,9 +18,22 @@ pie(data)
 # Superimpose a normal distribution on a histogram of data
 curve(dnorm(x, mean = mean(data), sd = sd(data)), add = TRUE)
 
+# Standard deviation
+sd(data)
+
+# MAD (median absolute deviation)
+mad(data)
+
+# Interquartile range
+IQR(data)
+
+# five number summary
+fivenum(data)
+
 # boxplots
 boxplot(data)
 boxplot(data, xlab = "x-axis", horizontal = TRUE, main = "Title") # creates a box plot with an x-axis labeled as "x-axis" and makes it horizontal and the title is "Title"
+boxplot.stat(data) # gives numbers that are depicted in the box plot
 
 # look at structure of data set
 str(data)
@@ -56,6 +69,12 @@ margin.table(data, 1) # 1 is the position of the column or row that you want the
 # One-Chi squared test, the defualt is that all catgorical data are distributed equally
 chisq.test(data)
 chisq.test(data, p = c(.41, .32, .15, .12)) # tests whether the proportion of the data differs from the four give proportions
+
+# Robust statistics
+mean(data, trim = .05) # take data points that are 5% on each end, total of 10%
+
+
+
 
 
  

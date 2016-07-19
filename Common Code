@@ -1,4 +1,24 @@
 # Use "Control L" to clear out your screen
 
+# delete all variables in work space
+rm(list = ls())
+
+# Get help with data sets, functions and more, put a question mark (?) in front of what you need
+?head
+
 # To see the first few values for a data set
 head(data1)
+
+# Pie Chart
+pie(data)
+
+# Superimpose a normal distribution on a histogram of data
+curve(dnorm(x, mean = mean(data), sd = sd(data)), add = TRUE)
+
+# boxplots
+boxplot(data)
+boxplot(data, xlab = "x-axis", horizontal = TRUE, main = "Title") # creates a box plot with an x-axis labeled as "x-axis" and makes it horizontal and the title is "Title"
+
+# look at structure of data set
+str(data)
+

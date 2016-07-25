@@ -12,3 +12,10 @@
     #BREUSCH-PAGAN TEST
         bptest(regression1)
         
+# creating a subset of the data in a table with specific criteria
+    
+table.subset <- subset(data, proportion > .01) # this gets all data and makes a new group from data with everything that has a proportion less than 1%
+
+data.subset <- data[data < 10] #makes subset of all data that is less than 10 
+
+

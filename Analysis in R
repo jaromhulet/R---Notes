@@ -18,4 +18,5 @@ table.subset <- subset(data, proportion > .01) # this gets all data and makes a 
 
 data.subset <- data[data < 10] #makes subset of all data that is less than 10 
 
-
+# correlation test
+cor.test(data$column1, data$column2, method = "pearson")    #methods can be "pearson", "kendall", and "spearman"

@@ -29,3 +29,12 @@ sd(data$column1)
 
 #average
 mean(data$column1)
+
+#Create a subset of a data set
+subset1 <- data1[which(data1$column1 == F), ] # will create a subset of the data1 set that has F for column 1
+subset1 <- data1[which(data1$column1 == F & data$column2 > 100), ] #subset where column1 one is F and column2 is greater than 100
+
+#histogram with specified range
+hist(strats$strat_count, breaks = seq(0,600, by = 25))
+
+
